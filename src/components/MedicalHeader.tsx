@@ -2,8 +2,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Heart, Shield, Smartphone } from 'lucide-react';
 import medicalHero from '@/assets/medical-hero.jpg';
-import momLogo from '@/assets/mom-logo.jpg';
-import momWordmark from '@/assets/mom-wordmark.jpg';
 
 export const MedicalHeader = () => {
   return (
@@ -20,16 +18,17 @@ export const MedicalHeader = () => {
           <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-6">
               <img 
-                src={momLogo} 
-                alt="MOM Ltd Logo" 
-                className="w-16 h-16 bg-white rounded-lg p-2 shadow-lg"
+                src="/lovable-uploads/67d0f1d1-2f51-48ed-973b-1c0a3d67c024.png" 
+                alt="MOM Ltd Trademark Logo" 
+                className="w-20 h-20 bg-white rounded-lg p-3 shadow-lg"
               />
               <div>
-                <img 
-                  src={momWordmark} 
-                  alt="MOM Ltd - Mobile Oncology Monitor" 
-                  className="h-12 filter brightness-0 invert opacity-90"
-                />
+                <h1 className="text-2xl md:text-3xl font-bold text-white">
+                  MOM Ltd
+                </h1>
+                <p className="text-white/80 text-sm md:text-base">
+                  Mobile Oncology Monitor
+                </p>
               </div>
             </div>
             
@@ -40,11 +39,9 @@ export const MedicalHeader = () => {
               </Badge>
             </div>
             
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              <span className="block text-lg md:text-xl font-normal opacity-90 mb-2">
-                Advanced Skin Cancer Detection Platform
-              </span>
-            </h1>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced Skin Cancer Detection Platform
+            </h2>
             
             <p className="text-white/90 text-base md:text-lg mb-6 leading-relaxed">
               Powered by MOM Ltd's patented neural network technology for professional-grade 
