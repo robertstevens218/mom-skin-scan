@@ -12,7 +12,7 @@ export const MedicalHeader = () => {
           alt="Medical skin scanning technology" 
           className="w-full h-48 md:h-64 object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-medical-blue/80 to-medical-teal/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-medical-burgundy/80 to-medical-burgundy-light/70" />
         
         <CardContent className="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
           <div className="max-w-2xl">

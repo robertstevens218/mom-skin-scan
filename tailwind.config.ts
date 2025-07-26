@@ -54,12 +54,12 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				medical: {
-					blue: 'hsl(var(--medical-blue))',
-					teal: 'hsl(var(--medical-teal))',
-					green: 'hsl(var(--medical-green))'
+					burgundy: 'hsl(var(--medical-burgundy))',
+					'burgundy-light': 'hsl(var(--medical-burgundy-light))',
+					'burgundy-dark': 'hsl(var(--medical-burgundy-dark))'
 				},
 				trust: {
-					blue: 'hsl(var(--trust-blue))'
+					burgundy: 'hsl(var(--trust-burgundy))'
 				},
 				scan: {
 					progress: 'hsl(var(--scan-progress))'

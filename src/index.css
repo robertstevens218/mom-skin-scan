@@ -8,55 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Medical color palette */
-    --background: 210 25% 98%;
-    --foreground: 210 15% 15%;
+    /* Medical burgundy palette matching MOM Ltd logo */
+    --background: 350 15% 98%;
+    --foreground: 350 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 15%;
+    --card-foreground: 350 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 15%;
+    --popover-foreground: 350 15% 15%;
 
-    /* Medical blue primary */
-    --primary: 200 85% 45%;
+    /* MOM burgundy primary */
+    --primary: 350 65% 40%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 200 85% 40%;
+    --primary-hover: 350 65% 35%;
 
-    /* Medical secondary teal */
-    --secondary: 175 70% 88%;
-    --secondary-foreground: 175 70% 20%;
+    /* Medical burgundy secondary */
+    --secondary: 350 25% 92%;
+    --secondary-foreground: 350 65% 25%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 55%;
+    --muted: 350 15% 96%;
+    --muted-foreground: 350 15% 55%;
 
-    /* Medical accent green */
-    --accent: 155 65% 85%;
-    --accent-foreground: 155 65% 25%;
+    /* Medical burgundy accent */
+    --accent: 350 35% 88%;
+    --accent-foreground: 350 65% 30%;
 
     /* Medical warning/destructive */
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 95%;
-    --ring: 200 85% 45%;
+    --border: 350 20% 90%;
+    --input: 350 20% 95%;
+    --ring: 350 65% 40%;
 
-    /* Medical specific colors */
-    --medical-blue: 200 85% 45%;
-    --medical-teal: 175 70% 50%;
-    --medical-green: 155 65% 50%;
-    --trust-blue: 210 75% 60%;
-    --scan-progress: 190 80% 55%;
+    /* MOM specific colors matching logo */
+    --medical-burgundy: 350 65% 40%;
+    --medical-burgundy-light: 350 45% 55%;
+    --medical-burgundy-dark: 350 75% 30%;
+    --trust-burgundy: 350 55% 50%;
+    --scan-progress: 345 60% 45%;
 
-    /* Medical gradients */
-    --gradient-medical: linear-gradient(135deg, hsl(var(--medical-blue)), hsl(var(--medical-teal)));
-    --gradient-scan: linear-gradient(45deg, hsl(var(--scan-progress)), hsl(var(--medical-green)));
-    --gradient-trust: linear-gradient(180deg, hsl(var(--trust-blue)), hsl(var(--medical-blue)));
+    /* MOM burgundy gradients */
+    --gradient-medical: linear-gradient(135deg, hsl(var(--medical-burgundy)), hsl(var(--medical-burgundy-light)));
+    --gradient-scan: linear-gradient(45deg, hsl(var(--scan-progress)), hsl(var(--medical-burgundy-light)));
+    --gradient-trust: linear-gradient(180deg, hsl(var(--trust-burgundy)), hsl(var(--medical-burgundy)));
 
-    /* Medical shadows */
-    --shadow-medical: 0 4px 20px hsl(var(--medical-blue) / 0.15);
-    --shadow-card: 0 2px 12px hsl(210 15% 15% / 0.08);
+    /* Medical shadows with burgundy tint */
+    --shadow-medical: 0 4px 20px hsl(var(--medical-burgundy) / 0.15);
+    --shadow-card: 0 2px 12px hsl(350 15% 15% / 0.08);
     --shadow-scan: 0 8px 32px hsl(var(--scan-progress) / 0.25);
 
     /* Medical animations */
@@ -83,42 +83,42 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark medical theme */
-    --background: 210 15% 8%;
-    --foreground: 210 25% 95%;
+    /* Dark burgundy medical theme */
+    --background: 350 15% 8%;
+    --foreground: 350 25% 95%;
 
-    --card: 210 15% 12%;
-    --card-foreground: 210 25% 95%;
+    --card: 350 15% 12%;
+    --card-foreground: 350 25% 95%;
 
-    --popover: 210 15% 12%;
-    --popover-foreground: 210 25% 95%;
+    --popover: 350 15% 12%;
+    --popover-foreground: 350 25% 95%;
 
-    --primary: 200 85% 60%;
-    --primary-foreground: 210 15% 8%;
-    --primary-hover: 200 85% 55%;
+    --primary: 350 65% 60%;
+    --primary-foreground: 350 15% 8%;
+    --primary-hover: 350 65% 55%;
 
-    --secondary: 175 70% 15%;
-    --secondary-foreground: 175 70% 85%;
+    --secondary: 350 25% 15%;
+    --secondary-foreground: 350 25% 85%;
 
-    --muted: 210 15% 15%;
-    --muted-foreground: 210 15% 65%;
+    --muted: 350 15% 15%;
+    --muted-foreground: 350 15% 65%;
 
-    --accent: 155 65% 20%;
-    --accent-foreground: 155 65% 85%;
+    --accent: 350 35% 20%;
+    --accent-foreground: 350 35% 85%;
 
     --destructive: 0 75% 55%;
-    --destructive-foreground: 210 25% 95%;
+    --destructive-foreground: 350 25% 95%;
 
-    --border: 210 15% 20%;
-    --input: 210 15% 18%;
-    --ring: 200 85% 60%;
+    --border: 350 15% 20%;
+    --input: 350 15% 18%;
+    --ring: 350 65% 60%;
 
-    /* Dark medical colors */
-    --medical-blue: 200 85% 60%;
-    --medical-teal: 175 70% 60%;
-    --medical-green: 155 65% 60%;
-    --trust-blue: 210 75% 70%;
-    --scan-progress: 190 80% 65%;
+    /* Dark burgundy medical colors */
+    --medical-burgundy: 350 65% 60%;
+    --medical-burgundy-light: 350 45% 65%;
+    --medical-burgundy-dark: 350 75% 40%;
+    --trust-burgundy: 350 55% 70%;
+    --scan-progress: 345 60% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
