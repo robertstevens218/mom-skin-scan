@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
+import { HealthcareLocator } from '@/components/HealthcareLocator';
 import { 
   CheckCircle, 
   AlertTriangle, 
@@ -11,7 +12,8 @@ import {
   Share, 
   Video,
   MessageSquare,
-  ArrowLeft
+  ArrowLeft,
+  MapPin
 } from 'lucide-react';
 
 interface ScanResultsProps {
@@ -30,6 +32,7 @@ export const ScanResults = ({ imageData, onBack }: ScanResultsProps) => {
   const [isAnalyzing, setIsAnalyzing] = useState(true);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<AnalysisResult | null>(null);
+  const [showHealthcareLocator, setShowHealthcareLocator] = useState(false);
 
   useEffect(() => {
     // Simulate AI analysis
@@ -111,6 +114,14 @@ export const ScanResults = ({ imageData, onBack }: ScanResultsProps) => {
     );
   }
 
+  if (showHealthcareLocator) {
+    return (
+      <div className="w-full space-y-6 animate-medical-fade-in">
+        <HealthcareLocator onClose={() => setShowHealthcareLocator(false)} />
+      </div>
+    );
+  }
+
   return (
     <div className="w-full max-w-4xl mx-auto space-y-6 animate-medical-fade-in">
       <div className="flex items-center gap-4">
@@ -189,7 +200,7 @@ export const ScanResults = ({ imageData, onBack }: ScanResultsProps) => {
             <CardTitle className="text-lg">Next Steps</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <Button variant="medical" className="flex flex-col gap-2 h-auto py-4">
                 <Download className="w-6 h-6" />
                 <span className="text-sm">Download Report</span>
@@ -203,6 +214,15 @@ export const ScanResults = ({ imageData, onBack }: ScanResultsProps) => {
               <Button variant="scan" className="flex flex-col gap-2 h-auto py-4">
                 <Video className="w-6 h-6" />
                 <span className="text-sm">Zoom Consult</span>
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                className="flex flex-col gap-2 h-auto py-4"
+                onClick={() => setShowHealthcareLocator(true)}
+              >
+                <MapPin className="w-6 h-6" />
+                <span className="text-sm">Find Providers</span>
               </Button>
               
               <Button variant="outline" className="flex flex-col gap-2 h-auto py-4">

@@ -11,7 +11,26 @@ const config: CapacitorConfig = {
   plugins: {
     Camera: {
       permissions: ['camera', 'photos']
+    },
+    Geolocation: {
+      permissions: ['location']
     }
+  },
+  android: {
+    permissions: [
+      'android.permission.CAMERA',
+      'android.permission.READ_EXTERNAL_STORAGE',
+      'android.permission.WRITE_EXTERNAL_STORAGE',
+      'android.permission.ACCESS_FINE_LOCATION',
+      'android.permission.ACCESS_COARSE_LOCATION',
+      'android.permission.INTERNET'
+    ]
+  },
+  ios: {
+    permissions: [
+      'NSCameraUsageDescription',
+      'NSLocationWhenInUseUsageDescription'
+    ]
   }
 };
 
