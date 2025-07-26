@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +53,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				medical: {
+					blue: 'hsl(var(--medical-blue))',
+					teal: 'hsl(var(--medical-teal))',
+					green: 'hsl(var(--medical-green))'
+				},
+				trust: {
+					blue: 'hsl(var(--trust-blue))'
+				},
+				scan: {
+					progress: 'hsl(var(--scan-progress))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +79,20 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-medical': 'var(--gradient-medical)',
+				'gradient-scan': 'var(--gradient-scan)',
+				'gradient-trust': 'var(--gradient-trust)'
+			},
+			boxShadow: {
+				'medical': 'var(--shadow-medical)',
+				'card-medical': 'var(--shadow-card)',
+				'scan': 'var(--shadow-scan)'
+			},
+			transitionProperty: {
+				'medical': 'var(--transition-medical)',
+				'scan': 'var(--transition-scan)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +110,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'scan-pulse': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.7',
+						transform: 'scale(1.05)'
+					}
+				},
+				'medical-fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'scan-pulse': 'scan-pulse 2s ease-in-out infinite',
+				'medical-fade-in': 'medical-fade-in 0.5s ease-out'
 			}
 		}
 	},
